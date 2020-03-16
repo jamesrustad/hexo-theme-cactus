@@ -1,4 +1,4 @@
-<div id="archive">
+<div id="archive" class="left">
   <ul class="post-list">
     <% var year = 0 %>
     <% var change = false %>
@@ -18,3 +18,19 @@
   </ul>
   <%- partial('_partial/pagination') %>
 </div>
+
+<section id="categories" class="right">
+  <div class="category-list-title">
+      <span class="h2"><a href="<%- url_for("categories") %>"><%= __('nav.category') %></a></span>
+      <% var visibleCategories = 0 %>
+      <% site.categories.each(function(cat){ %>
+        <% if (cat.length) { %>
+          <% visibleCategories += 1 %>
+        <% } %>
+      <% }) %>
+      <%- _p('counter.categories', visibleCategories) %>
+  </div>
+  <div class="category-list">
+    <%- list_categories() %>
+  </div>
+</section>
