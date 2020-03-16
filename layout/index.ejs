@@ -29,22 +29,6 @@ Another random blog about VFX, movies and various other things that grab my atte
   <% } %>
 </section>
 
-<section id="categories" class="right">
-  <div class="category-list-title">
-      <span class="h2"><a href="<%- url_for("categories") %>"><%= __('nav.category') %></a></span>
-      <% var visibleCategories = 0 %>
-      <% site.categories.each(function(cat){ %>
-        <% if (cat.length) { %>
-          <% visibleCategories += 1 %>
-        <% } %>
-      <% }) %>
-      <%- _p('counter.categories', visibleCategories) %>
-  </div>
-  <div class="category-list">
-    <%- list_categories() %>
-  </div>
-</section>
-
 <% if (site.data.projects) { %>
 <section id="projects">
   <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
