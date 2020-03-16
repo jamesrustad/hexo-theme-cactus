@@ -37,10 +37,9 @@ body
 
 .content
   position: relative
-  display: flex
-  flex-direction: column
+  flex-wrap: wrap
+  flex-direction: row
   min-height: 100%
-  overflow-wrap: break-word
 
   p
     hyphens(auto)
@@ -80,6 +79,12 @@ body
   h6
     a:hover
       underline(6px, $color-link)
+
+.left
+  float: left
+
+.right
+  float: right
 
 @media (min-width: 540px)
   .image-wrap
@@ -181,7 +186,7 @@ code
     &:after
       clear: both
 
-  &:hover 
+  &:hover
     .btn-copy
       opacity: 1
 

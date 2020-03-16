@@ -27,7 +27,7 @@
   <% } %>
 </section>
 
-<section id="writing">
+<section id="writing" class="left">
   <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
   <% if (theme.tags_overview && site.tags.length) { %>
   <span class="h2"><%= __('index.topics') %></span>
@@ -53,6 +53,22 @@
   <% if (theme.posts_overview.show_all_posts) { %>
     <%- partial('_partial/pagination') %>
   <% } %>
+</section>
+
+<section id="categories" class="right">
+  <div class="category-list-title">
+      <span class="h1"><a href="<%- url_for("categories") %>"><%= __('nav.category') %></a></span>
+      <% var visibleCategories = 0 %>
+      <% site.categories.each(function(cat){ %>
+        <% if (cat.length) { %>
+          <% visibleCategories += 1 %>
+        <% } %>
+      <% }) %>
+      <%- _p('counter.categories', visibleCategories) %>
+  </div>
+  <div class="category-list">
+    <%- list_categories() %>
+  </div>
 </section>
 
 <% if (site.data.projects) { %>

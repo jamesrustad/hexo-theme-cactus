@@ -1,9 +1,9 @@
 nav:
   home: Home
   about: About
-  articles: Writing
-  tag: Tag
-  category: Category
+  articles: Blog
+  tag: Tags
+  category: Categories
   projects: Projects
   search: Search
 
@@ -14,17 +14,17 @@ index:
   find_me_on: Find me on
   enum_comma: ','
   enum_and: and
-  articles: Writing
+  articles: Blog
   projects: Projects
   topics: Topics
-  most_recent: Most recent
+  most_recent: Most Recent
 
 post:
   desktop:
     previous: Previous post
     next: Next post
     back_to_top: Back to top
-    share: Share post
+    share: Share Post
   mobile:
     menu: Menu
     toc: TOC
