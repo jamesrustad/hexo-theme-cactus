@@ -108,7 +108,8 @@ colorscheme: classic
 
 # Maximal width of the page in rem units.
 # Default: 48
-page_width: 55
+# page_width: 55
+page_width: 60
 
 
 ##############################################################################
